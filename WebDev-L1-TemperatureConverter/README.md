@@ -1,26 +1,29 @@
 # Temperature Converter
 
-A responsive temperature conversion web application developed as part of the OASIS Infobyte Web Development & Design Internship.
+A responsive temperature conversion website developed as part of the OASIS Infobyte Web Development & Designing Internship.
 
 ## Features
 
 - Convert temperatures between Celsius, Fahrenheit, and Kelvin
-- Simple and responsive user interface
-- Input validation
-- Prevents temperatures below absolute zero
-- Displays all converted temperature values
-- Works on desktop and mobile devices
+- Numeric temperature input
+- Unit selection using a dropdown
+- Displays all three converted values
+- Input validation for invalid values
+- Absolute-zero validation
+- Responsive design for desktop and mobile devices
+- Clean and user-friendly interface
 
 ## Technologies Used
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (Vanilla JavaScript)
 
 ## Project Structure
 
 ```text
 WebDev-L1-TemperatureConverter/
+│
 ├── index.html
 ├── style.css
 ├── script.js

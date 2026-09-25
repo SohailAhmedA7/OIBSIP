@@ -2,31 +2,35 @@ const temperatureInput = document.getElementById("temperature");
 const unitSelect = document.getElementById("unit");
 const convertButton = document.getElementById("convertBtn");
 const result = document.getElementById("result");
+const error = document.getElementById("error");
 
 convertButton.addEventListener("click", function () {
 
     const temperature = parseFloat(temperatureInput.value);
     const unit = unitSelect.value;
 
-    // Check for empty or invalid input
+    error.textContent = "";
+
+    // Check if input is empty or invalid
     if (isNaN(temperature)) {
-        result.textContent = "Please enter a valid temperature.";
+        error.textContent = "Please enter a valid temperature.";
+        result.textContent = "Your converted temperature will appear here.";
         return;
     }
 
-    // Check for temperatures below absolute zero
+    // Absolute zero validation
     if (unit === "celsius" && temperature < -273.15) {
-        result.textContent = "Temperature cannot be below -273.15 °C.";
+        error.textContent = "Temperature cannot be below absolute zero.";
         return;
     }
 
     if (unit === "fahrenheit" && temperature < -459.67) {
-        result.textContent = "Temperature cannot be below -459.67 °F.";
+        error.textContent = "Temperature cannot be below absolute zero.";
         return;
     }
 
     if (unit === "kelvin" && temperature < 0) {
-        result.textContent = "Temperature cannot be below 0 K.";
+        error.textContent = "Kelvin temperature cannot be below 0 K.";
         return;
     }
 
@@ -34,25 +38,18 @@ convertButton.addEventListener("click", function () {
     let fahrenheit;
     let kelvin;
 
-    // Convert the input temperature to all three units
+    // Convert to Celsius first
     if (unit === "celsius") {
-
         celsius = temperature;
-        fahrenheit = (temperature * 9 / 5) + 32;
-        kelvin = temperature + 273.15;
-
     } else if (unit === "fahrenheit") {
-
-        fahrenheit = temperature;
         celsius = (temperature - 32) * 5 / 9;
-        kelvin = celsius + 273.15;
-
     } else if (unit === "kelvin") {
-
-        kelvin = temperature;
         celsius = temperature - 273.15;
-        fahrenheit = (celsius * 9 / 5) + 32;
     }
+
+    // Convert Celsius to other units
+    fahrenheit = (celsius * 9 / 5) + 32;
+    kelvin = celsius + 273.15;
 
     result.innerHTML = `
         Celsius: ${celsius.toFixed(2)} °C<br>
