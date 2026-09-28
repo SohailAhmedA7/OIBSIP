@@ -1,0 +1,383 @@
+/* =========================
+   Global Styles
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8f6;
+    color: #183b2a;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            rgba(8, 45, 29, 0.78),
+            rgba(8, 45, 29, 0.78)
+        ),
+        url("https://upload.wikimedia.org/wikipedia/commons/6/6e/A._P._J._Abdul_Kalam.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 13px 28px;
+    border-radius: 30px;
+
+    background: #d7f5df;
+    color: #14532d;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+    background: white;
+}
+
+
+/* =========================
+   Common Section Styles
+========================= */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 25px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.section-heading span {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #29945a;
+}
+
+.section-heading h2 {
+    font-size: 2.4rem;
+}
+
+
+/* =========================
+   About Section
+========================= */
+
+.about-section {
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.image-container {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #4a5c51;
+}
+
+
+/* =========================
+   Timeline
+========================= */
+
+.timeline-section {
+    background: #eef8f1;
+}
+
+.timeline {
+    position: relative;
+    max-width: 850px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 110px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #9bc9aa;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 40px;
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.timeline-year {
+    font-weight: bold;
+    color: #218c50;
+    text-align: right;
+}
+
+.timeline-content {
+    position: relative;
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.timeline-content::before {
+    content: "";
+    position: absolute;
+    left: -46px;
+    top: 28px;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    background: #29945a;
+    border: 4px solid #eef8f1;
+}
+
+.timeline-content h3 {
+    margin-bottom: 8px;
+}
+
+.timeline-content p {
+    color: #617066;
+}
+
+
+/* =========================
+   Achievements
+========================= */
+
+.achievements-section {
+    background: white;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.achievement-card {
+    padding: 30px 22px;
+    background: #f5faf6;
+    border-radius: 16px;
+    text-align: center;
+
+    transition: 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-icon {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.achievement-card h3 {
+    margin-bottom: 10px;
+}
+
+.achievement-card p {
+    font-size: 0.95rem;
+    color: #617066;
+}
+
+
+/* =========================
+   Quote
+========================= */
+
+.quote-section {
+    padding: 110px 25px;
+    text-align: center;
+    background: #123d29;
+    color: white;
+}
+
+.quote-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.quote-mark {
+    font-size: 5rem;
+    line-height: 0.5;
+    color: #9ee5b4;
+}
+
+blockquote {
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+.quote-content p {
+    color: #c5dfce;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #09281b;
+    color: #c9dfd1;
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 850px) {
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .image-container {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .achievement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 85vh;
+        background-attachment: scroll;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 70px 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.9rem;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .timeline-item {
+        display: block;
+        padding-left: 30px;
+        margin-bottom: 30px;
+    }
+
+    .timeline-year {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .timeline-content::before {
+        left: -31px;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-section {
+        padding: 80px 20px;
+    }
+}
