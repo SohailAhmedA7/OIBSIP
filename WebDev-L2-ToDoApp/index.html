@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | To-Do App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <!-- Header -->
+        <header class="app-header">
+            <div>
+                <p class="eyebrow">PRODUCTIVITY</p>
+                <h1>TaskFlow</h1>
+                <p class="subtitle">
+                    Organize your tasks and stay productive.
+                </p>
+            </div>
+        </header>
+
+
+        <!-- Task Input -->
+        <section class="task-input-section">
+
+            <form id="task-form">
+
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="What needs to be done?"
+                    autocomplete="off"
+                >
+
+                <button type="submit" class="add-button">
+                    + Add Task
+                </button>
+
+            </form>
+
+            <p id="input-error" class="input-error"></p>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="stat-label">Total</span>
+                <strong id="total-count">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Pending</span>
+                <strong id="pending-count">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Completed</span>
+                <strong id="completed-count">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Pending Tasks -->
+        <section class="task-section">
+
+            <div class="section-header">
+                <div>
+                    <p class="section-label">CURRENT</p>
+                    <h2>Pending Tasks</h2>
+                </div>
+
+                <span id="pending-badge" class="task-badge">0</span>
+            </div>
+
+            <div id="pending-tasks" class="task-list"></div>
+
+            <div id="pending-empty" class="empty-state">
+                <div class="empty-icon">✓</div>
+                <h3>No pending tasks</h3>
+                <p>
+                    You're all caught up. Add a new task to get started.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Completed Tasks -->
+        <section class="task-section completed-section">
+
+            <div class="section-header">
+                <div>
+                    <p class="section-label">DONE</p>
+                    <h2>Completed Tasks</h2>
+                </div>
+
+                <span id="completed-badge" class="task-badge">0</span>
+            </div>
+
+            <div id="completed-tasks" class="task-list"></div>
+
+            <div id="completed-empty" class="empty-state">
+                <div class="empty-icon">○</div>
+                <h3>No completed tasks</h3>
+                <p>
+                    Completed tasks will appear here.
+                </p>
+            </div>
+
+        </section>
+
+
+        <footer>
+            <p>TaskFlow • OASIS Infobyte Level 2 Task 3</p>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
